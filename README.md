@@ -23,5 +23,6 @@ Specifically for range queries problem I implemented method count that counts no
 ![image](images/benchmark1000.png)
 ![image](images/benchmark10000.png)
 
+MyRBtreeBench uses count method that goes through the tree and compares range with node key. Setbench uses set. MyRBtreeBench_v2 uses find range.
 
 
