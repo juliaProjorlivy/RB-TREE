@@ -232,6 +232,7 @@ public:
         }
         delete nil_;
     }
+    Tree(const Tree<T> &) = delete;
 
     int count(T key)
     {
