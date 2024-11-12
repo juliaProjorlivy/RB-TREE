@@ -1,6 +1,5 @@
 #include "RBtree.hpp"
 #include <iostream>
-#include <istream>
 
 enum Ioption : char {KEY = 'k', QUERY = 'q'};
 
@@ -13,17 +12,18 @@ int main()
         std::cin >> option;
         if(option == KEY)
         {
-            int key {};
+            double key {};
             std::cin >> key;
-            tree.insert(key);
+            tree.insert(static_cast<int>(key));
         }
         else if(option == QUERY)
         {
-            int begin {};
-            int end{};
+            double begin {};
+            double end{};
             std::cin >> begin >> end;
+
             int res{};
-            res = tree.count(begin, end);
+            res = tree.count(static_cast<int>(begin), static_cast<int>(end));
             std::cout << res << " ";
         }
         else {break;}
